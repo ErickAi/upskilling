@@ -1,10 +1,10 @@
 == Up skilling project
 
-+++ <details><summary> +++
-Topics
-+++ </summary><div> +++
+=== https://github.com/ErickAi/upskilling/wiki[Summary]
 
-- 2. CS basics, Algorithms & Data structures
+=== Topics
+
+- https://github.com/ErickAi/upskilling/tree/master/02-csbasics[CS basics, Algorithms & Data structures]
 - 3. Collections
 - 4. Java basics
 - 5. Exceptions
@@ -20,9 +20,4 @@ Topics
 - 16. SQL
 - 18. JMS / Kafka
 
-+++ </div></details> +++
-
-=== Навигация по домашним заданиям в репозитории
-
-https://github.com/ErickAi/upskilling[CS basics, Algorithms & Data structures]
 

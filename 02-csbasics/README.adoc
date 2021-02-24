@@ -1,0 +1,14 @@
+= 02. CS basics, Algorithms & Data structures
+
+== https://github.com/ErickAi/upskilling/wiki/02-csbasics[Summary]
+
+== https://github.com/ErickAi/upskilling/tree/master/02-csbasics/src/test/java/er/upskilling/csbasics[Code]
+
+== Theory
+https://learning.oreilly.com/videos/learn-algorithms-and/9781788624428[Learn Algorithms and Data Structures in Java for Day-to-Day Applications]
+
+https://www.youtube.com/watch?v=KdZ4HF1SrFs&list=PLRDzFCPr95fK7tr47883DFUbm4GeOjjc0&ab_channel=%D0%A2%D0%B8%D0%BC%D0%BE%D1%84%D0%B5%D0%B9%D0%A5%D0%B8%D1%80%D1%8C%D1%8F%D0%BD%D0%BE%D0%B2[Тимофей Хирьянов. Алгоритмы на Python 3.]
+
+http://neerc.ifmo.ru/wiki/index.php?title=%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0[ИТМО. Викиконспекты.]
+
+
