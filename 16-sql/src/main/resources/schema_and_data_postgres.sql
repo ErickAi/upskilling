@@ -1,29 +1,29 @@
 
-
+-- Продавцы
 CREATE TABLE Salespeople
 (
-  snum integer NOT NULL,
-  sname char (10) NOT NULL,
-  city char (10),
-  comm decimal
+  snum integer NOT NULL,        -- Номер продавца
+  sname char (10) NOT NULL,     -- Имя продавца
+  city char (10),               -- Город
+  comm decimal                  -- Комиссионные
 );
-
+-- Заказчики
 CREATE TABLE Customers
 (
-  cnum integer NOT NULL,
-  cname char (10) NOT NULL,
-  city char (10),
-  rating integer,
-  snum integer
+  cnum integer NOT NULL,        -- Номер заказчика
+  cname char (10) NOT NULL,     -- Имя заказчика
+  city char (10),               -- Город
+  rating integer,               -- Рейтинг
+  snum integer                  -- Номер продавца
 );
-
+-- Заказы
 CREATE TABLE Orders
 (
-  onum integer NOT NULL,
-  amt decimal (10,2),
-  odate date,
-  cnum integer,
-  snum integer
+  onum integer NOT NULL,        -- Номер заказа
+  amt decimal (10,2),           -- Имя заказчика
+  odate date,                   -- Дата
+  cnum integer,                 -- Номер заказчика
+  snum integer                  -- Номер продавца
 );
 
 
