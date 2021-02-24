@@ -10,31 +10,19 @@
   </parent>
 
   <groupId>er.upskilling</groupId>
-  <artifactId>sql</artifactId>
+  <artifactId>csbasics</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>16_sql</name>
+  <name>02_csbasics</name>
 
   <properties>
     <java.version>15</java.version>
   </properties>
-
   <dependencies>
-    <!-- DB & ORM -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-jdbc</artifactId>
+      <artifactId>spring-boot-starter</artifactId>
     </dependency>
-    <dependency>
-      <groupId>com.h2database</groupId>
-      <artifactId>h2</artifactId>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.postgresql</groupId>
-      <artifactId>postgresql</artifactId>
-      <scope>runtime</scope>
-    </dependency>
-    <!-- tools -->
+
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-devtools</artifactId>
