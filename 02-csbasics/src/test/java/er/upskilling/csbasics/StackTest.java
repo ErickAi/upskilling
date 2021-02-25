@@ -16,7 +16,7 @@ class StackTest {
     stack.push(a);
     String pop = stack.pop();
     System.out.println(pop);
-    assertEquals(pop,a);
+    assertEquals(a, pop);
     assertTrue(stack.empty());
   }
 
@@ -27,7 +27,7 @@ class StackTest {
     stack.push(a);
     String peek = stack.peek();
     System.out.println(peek);
-    assertEquals(peek,a);
+    assertEquals(a, peek);
     assertFalse(stack.empty());
   }
 

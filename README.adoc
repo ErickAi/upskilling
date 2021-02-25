@@ -1,6 +1,6 @@
 == Up skilling project
 
-=== https://github.com/ErickAi/upskilling/wiki[Summary]
+=== https://github.com/ErickAi/upskilling/wiki[Wiki summary]
 
 === Topics
 
