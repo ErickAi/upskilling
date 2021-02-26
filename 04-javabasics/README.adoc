@@ -1,0 +1,10 @@
+== 02. CS basics, Algorithms & Data structures
+
+=== https://github.com/ErickAi/upskilling/tree/master/04-javabasics[Wiki summary]
+
+=== https://github.com/ErickAi/upskilling/tree/master/04-javabasics/src[Code]
+
+=== Theory
+
+- Multiply internet resources
+

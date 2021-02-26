@@ -4,9 +4,9 @@
 
 === Topics
 
-- https://github.com/ErickAi/upskilling/tree/master/02-csbasics[CS basics, Algorithms & Data structures]
+- https://github.com/ErickAi/upskilling/tree/master/02-csbasics[02. CS basics, Algorithms & Data structures]
 - 3. Collections
-- 4. Java basics
+- https://github.com/ErickAi/upskilling/tree/master/04-javabasics[04. Java basics]
 - 5. Exceptions
 - 6. Memory & GC
 - 7. Modern Java Versions Specifics
