@@ -8,11 +8,11 @@ public class EqualAndHashcodeTest {
 
   @Test
   public void hashcode() {
-    Person ivan = new Person(1, "Ivan", 11);
-    Person piter = new Person(2, "Piter", 11);
+    EqualsAndHashcode ivan = new EqualsAndHashcode(1, "Ivan", 11);
+    EqualsAndHashcode piter = new EqualsAndHashcode(2, "Piter", 11);
 
     System.out.println("Ivan hashcode: " + ivan.hashCode() + "\nPiter hashcode: " + piter.hashCode());
-    HashSet<Person> people = new HashSet<>();
+    HashSet<EqualsAndHashcode> people = new HashSet<>();
     people.add(ivan);
     people.add(piter);
     updateAge(people);
@@ -21,10 +21,10 @@ public class EqualAndHashcodeTest {
     System.out.println(people.contains(ivan));
   }
 
-  public static void updateAge(HashSet<Person> people) {
-    for (Person person : people) {
-      person.setAge(person.getAge() + 1);
-      System.out.println("hashcode: " + person.hashCode());
+  public static void updateAge(HashSet<EqualsAndHashcode> people) {
+    for (EqualsAndHashcode equalsAndHashcode : people) {
+      equalsAndHashcode.setSomeField(equalsAndHashcode.getSomeField() + 1);
+      System.out.println("hashcode: " + equalsAndHashcode.hashCode());
     }
   }
 }
