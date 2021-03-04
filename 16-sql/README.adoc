@@ -5,7 +5,7 @@ PostgreSQL database
     docker run -d --name pg11testdb -e POSTGRES_DB=testdb -e POSTGRES_USER=user -e POSTGRES_PASSWORD=password -p 3432:5432 postgres:11
 
 +++ <details><summary> +++
-Salespeople (Продавцы)
+*Salespeople (Продавцы)*
 +++ </summary><div> +++
 
 [width="77%"]
@@ -18,7 +18,7 @@ Salespeople (Продавцы)
 +++ </div></details> +++
 
 +++ <details><summary> +++
-Customers (Заказчики)
+*Customers (Заказчики)*
 +++ </summary><div> +++
 
 [width="77%"]
@@ -32,7 +32,7 @@ Customers (Заказчики)
 +++ </div></details> +++
 
 +++ <details><summary> +++
-Orders (Заказы)
+*Orders (Заказы)*
 +++ </summary><div> +++
 
 [width="77%"]
