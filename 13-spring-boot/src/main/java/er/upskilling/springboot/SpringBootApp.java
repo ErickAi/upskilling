@@ -1,13 +1,13 @@
-package er.upskilling.sql;
+package er.upskilling.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Application {
+public class SpringBootApp {
 
   public static void main(String[] args) {
-    SpringApplication.run(Application.class, args);
+    SpringApplication.run(SpringBootApp.class, args);
   }
 
 }

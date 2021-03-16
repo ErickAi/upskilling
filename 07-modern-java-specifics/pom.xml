@@ -8,14 +8,16 @@
     <version>2.4.3</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
+
   <groupId>er.upskilling</groupId>
   <artifactId>modernjava</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>modernjava</name>
-  <description>Demo project for Spring Boot</description>
+  <name>07_modernjava</name>
+
   <properties>
     <java.version>15</java.version>
   </properties>
+
   <dependencies>
     <dependency>
       <groupId>org.springframework.boot</groupId>
