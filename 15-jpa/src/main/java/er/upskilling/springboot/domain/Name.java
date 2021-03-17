@@ -20,8 +20,9 @@ public class Name {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
-//  @OneToOne(optional = false, mappedBy="name")
-//  private User user;
+  @OneToOne(optional = false)
+  @JoinColumn(name="user_id", unique = true, nullable = false)
+  private User user;
   @Column(name = "title")
   @Size(max = 128)
   private String title;

@@ -14,18 +14,15 @@ import javax.persistence.*;
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Entity
-@Table(name="LOCATIONS")
-public class Location {
+@Table(name="STREETS")
+public class Street {
 
   @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
-  @OneToOne(optional = false, mappedBy = "location")
-  private User user;
   @OneToOne(optional = false)
-  @JoinColumn(name = "location_id", unique = true, nullable = false, updatable = false)
-  private Street street;
-  private String city;
-  private String state;
-  private String country;
-  private String postcode;
+  @JoinColumn(name = "location_id", unique = true)
+  private Location location;
+  private long number;
+  private String name;
 }

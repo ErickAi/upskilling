@@ -14,17 +14,17 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-@ToString(of={"name", "gender", "nat"})
+@ToString(of = {"name", "gender", "nat"})
 @Entity
 @Table(name = "USERS")
+@SequenceGenerator(name = "user_seq", initialValue = 1000)
 public class User {
 
   @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
+  @GeneratedValue(generator = "user_seq")
   private Long id;
 
-  @OneToOne(optional = false)
-  @JoinColumn(name="user_id", unique = true, nullable = false, insertable = false, updatable = false)
+  @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, optional = false)
   private Name name;
 
   @Enumerated(EnumType.STRING)
@@ -41,8 +41,7 @@ public class User {
   private String phone;
   private String gender;
   private String nat;
-  @OneToOne(optional = false)
-  @JoinColumn(name="user_id", unique = true, nullable = false, insertable = false, updatable = false)
+  @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, optional = false)
   private Location location;
 
 }
