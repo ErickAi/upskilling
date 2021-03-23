@@ -1,9 +1,9 @@
-package er.upskilling.springboot.config;
+package er.upskilling.jpa.config;
 
-import er.upskilling.springboot.domain.Role;
-import er.upskilling.springboot.domain.User;
-import er.upskilling.springboot.dto.UserList;
-import er.upskilling.springboot.repo.UserRepo;
+import er.upskilling.jpa.domain.Role;
+import er.upskilling.jpa.domain.User;
+import er.upskilling.jpa.dto.UserList;
+import er.upskilling.jpa.repo.UserRepo;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.h2.tools.Server;

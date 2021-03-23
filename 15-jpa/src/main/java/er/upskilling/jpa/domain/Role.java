@@ -1,4 +1,4 @@
-package er.upskilling.springboot.domain;
+package er.upskilling.jpa.domain;
 
 import org.springframework.security.core.GrantedAuthority;
 

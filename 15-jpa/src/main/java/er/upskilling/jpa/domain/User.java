@@ -1,4 +1,4 @@
-package er.upskilling.springboot.domain;
+package er.upskilling.jpa.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
@@ -18,10 +18,15 @@ import java.util.Set;
 @Entity
 @Table(name = "USERS")
 @SequenceGenerator(name = "user_seq", initialValue = 1000)
+@SecondaryTable(name = "NAMES",
+pkJoinColumns = {
+    @PrimaryKeyJoinColumn(name = "id")
+})
 public class User {
 
   @Id
   @GeneratedValue(generator = "user_seq")
+  @Column(name = "ID", table = "USERS")
   private Long id;
 
   @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, optional = false)

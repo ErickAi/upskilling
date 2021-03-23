@@ -1,6 +1,6 @@
-package er.upskilling.springboot.repo;
+package er.upskilling.jpa.repo;
 
-import er.upskilling.springboot.domain.User;
+import er.upskilling.jpa.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepo extends JpaRepository<User, Long> {

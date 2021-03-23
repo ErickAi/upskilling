@@ -1,7 +1,7 @@
-package er.upskilling.springboot.dto;
+package er.upskilling.jpa.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import er.upskilling.springboot.domain.User;
+import er.upskilling.jpa.domain.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
