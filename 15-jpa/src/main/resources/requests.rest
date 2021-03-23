@@ -1,0 +1,13 @@
+###
+GET http://localhost:4045/actuator
+###
+GET http://localhost:4045/actuator/mappings
+
+###
+GET http://localhost:4045/users/1001
+
+###
+GET http://localhost:4045/no-trans/1002
+
+###
+GET http://localhost:4045/users

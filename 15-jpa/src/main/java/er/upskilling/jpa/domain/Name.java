@@ -3,33 +3,20 @@ package er.upskilling.jpa.domain;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
-import javax.persistence.*;
-import javax.validation.constraints.Size;
+import javax.persistence.Embeddable;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
+@ToString(of = {"title", "first", "last"})
 @JsonIgnoreProperties(ignoreUnknown = true)
-@Entity
-@Table(name="NAMES")
-@Access(AccessType.FIELD)
+@Embeddable
 public class Name {
 
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
-  @OneToOne(optional = false)
-  @JoinColumn(name="user_id", unique = true, nullable = false)
-  private User user;
-  @Column(name = "title")
-  @Size(max = 128)
   private String title;
-  @Column(name = "first")
-  @Size(max = 128)
+
   private String first;
-  @Column(name = "last")
-  @Size(max = 128)
+
   private String last;
 }

@@ -2,12 +2,12 @@ package er.upskilling.jpa.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
+import org.springframework.util.Assert;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
-import java.util.Set;
 
 @Getter
 @Setter
@@ -18,35 +18,26 @@ import java.util.Set;
 @Entity
 @Table(name = "USERS")
 @SequenceGenerator(name = "user_seq", initialValue = 1000)
-@SecondaryTable(name = "NAMES",
-pkJoinColumns = {
-    @PrimaryKeyJoinColumn(name = "id")
-})
 public class User {
 
   @Id
   @GeneratedValue(generator = "user_seq")
-  @Column(name = "ID", table = "USERS")
   private Long id;
 
-  @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, optional = false)
+  @Embedded
+  @AttributeOverrides({
+      @AttributeOverride(name = "title", column = @Column(name = "name_title")),
+      @AttributeOverride(name = "first", column = @Column(name = "first_name")),
+      @AttributeOverride(name = "last", column = @Column(name = "last_name"))})
   private Name name;
 
-  @Enumerated(EnumType.STRING)
-  @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))
-  @Column(name = "role")
-  @ElementCollection(fetch = FetchType.EAGER)
-
-  private Set<Role> roles;
   @Column(name = "email", nullable = false, unique = true)
   @Email
   @NotEmpty
   @Size(max = 128)
   private String email;
+
   private String phone;
   private String gender;
   private String nat;
-  @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, optional = false)
-  private Location location;
-
 }

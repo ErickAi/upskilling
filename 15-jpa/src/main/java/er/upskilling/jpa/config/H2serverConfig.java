@@ -1,6 +1,5 @@
 package er.upskilling.jpa.config;
 
-import er.upskilling.jpa.domain.Role;
 import er.upskilling.jpa.domain.User;
 import er.upskilling.jpa.dto.UserList;
 import er.upskilling.jpa.repo.UserRepo;
@@ -13,10 +12,8 @@ import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.PostConstruct;
 import java.sql.SQLException;
-import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
-import java.util.Set;
 
 @Configuration
 @Slf4j
@@ -39,17 +36,21 @@ public class H2serverConfig {
 
   @PostConstruct
   public void initData() {
-    RestTemplate restTemplate = new RestTemplate();
-    List<User> users = Objects.requireNonNull(restTemplate.getForObject(
-        "https://randomuser.me/api/?exc=login,cell,id,picture&noinfo&nat=us,gb,au&results=100"
-        , UserList.class)).getResults();
-    long counter = 0;
-    for (User u : users) {
-      u.getName().setUser(u);
-      u.getLocation().setUser(u);
-      u.getLocation().getStreet().setLocation(u.getLocation());
-      u.setRoles(Set.of(Role.ROLE_USER));
-      if (counter == 0L) {
+    if (!userRepo.existsById(1000L)) {
+      RestTemplate restTemplate = new RestTemplate();
+      List<User> users = Objects.requireNonNull(restTemplate.getForObject(
+          "https://randomuser.me/api/?exc=login,cell,id,picture&noinfo&nat=us,gb,au&results=100"
+          , UserList.class)).getResults();
+      userRepo.saveAll(users);
+
+/*
+      long counter = 0;
+      for (User u : users) {
+        u.getName().setUser(u);
+        u.getLocation().setUser(u);
+        u.getLocation().getStreet().setLocation(u.getLocation());
+        u.setRoles(Set.of(Role.ROLE_USER));
+        if (counter == 0L) {
         u.setRoles(Set.of(Role.ROLE_USER, Role.ROLE_MODERATOR, Role.ROLE_ADMIN));
         counter += 1;
       } else {
@@ -60,10 +61,9 @@ public class H2serverConfig {
           u.setRoles(Collections.singleton(Role.ROLE_USER));
         }
       }
-      userRepo.save(u);
+        userRepo.save(u);
+      }
+*/
     }
-
-//    userRepo.saveAll(users);
   }
-
 }
