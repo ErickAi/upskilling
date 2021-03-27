@@ -2,13 +2,13 @@ package er.upskilling.collections;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 
-class CollectionsApplicationTests {
+class SetTests {
 
   @Test
   void test() {
-    Collection<String> collection = new ArrayList<>();
+    Collection<String> collection = new HashSet<>();
   }
 }
