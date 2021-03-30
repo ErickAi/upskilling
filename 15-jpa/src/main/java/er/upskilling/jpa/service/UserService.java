@@ -4,7 +4,6 @@ import er.upskilling.jpa.domain.User;
 import er.upskilling.jpa.repo.UserRepo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -12,7 +11,7 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 //@Transactional(value = Transactional.TxType.NEVER)
-@Transactional(propagation = Propagation.NOT_SUPPORTED)
+//@Transactional(propagation = Propagation.NOT_SUPPORTED)
 public class UserService {
 
   private final UserRepo userRepo;
@@ -23,7 +22,7 @@ public class UserService {
 
   @Transactional
   public User findById(Long id) {
-    User user =  userRepo.findById(id).orElseThrow(() -> new NullPointerException("User not found"));
+    User user = userRepo.findById(id).orElseThrow(() -> new NullPointerException("User not found"));
     changeUserEmail(user);
     return user;
   }

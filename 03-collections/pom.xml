@@ -11,8 +11,8 @@
   <groupId>er.upskilling</groupId>
   <artifactId>collections</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>collections</name>
-  <description>Demo project for Spring Boot</description>
+  <name>03-collections</name>
+
   <properties>
     <java.version>11</java.version>
     <spring-native.version>0.9.1</spring-native.version>

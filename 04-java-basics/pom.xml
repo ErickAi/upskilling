@@ -10,9 +10,9 @@
   </parent>
 
   <groupId>er.upskilling</groupId>
-  <artifactId>csbasics</artifactId>
+  <artifactId>javabasics</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>02_csbasics</name>
+  <name>04-java-basics</name>
 
   <properties>
     <java.version>15</java.version>

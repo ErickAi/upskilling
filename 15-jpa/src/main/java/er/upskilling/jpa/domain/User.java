@@ -2,12 +2,13 @@ package er.upskilling.jpa.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
-import org.springframework.util.Assert;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
@@ -36,6 +37,9 @@ public class User {
   @NotEmpty
   @Size(max = 128)
   private String email;
+
+  @ElementCollection
+  private List<String> phones = new ArrayList<>();
 
   private String phone;
   private String gender;

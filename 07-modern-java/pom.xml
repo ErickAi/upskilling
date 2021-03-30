@@ -12,7 +12,7 @@
   <groupId>er.upskilling</groupId>
   <artifactId>modernjava</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>07_modernjava</name>
+  <name>07-modern-java</name>
 
   <properties>
     <java.version>15</java.version>
