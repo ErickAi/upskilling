@@ -1,13 +1,22 @@
 spring:
-  profiles.active: default
+#  profiles.active: default
   datasource:
     initialization-mode: always
-    driverClassName: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:3432/testdb
-    username: user
-    password: password
+    schema:
+      - traning-schema_and_data.sql
+      - sql-ex.ru.sql
+#    driverClassName: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost:3432/testdb
+#    username: user
+#    password: password
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:test-db
+    # tcp connection jdbc:h2:tcp://localhost:5656/mem:test-db
+    # web connection http://localhost:6565
+    username: sa
+    password:
 
 logging:
   level:
-    org.springframework: warn
+    org.springframework: debug
 #    org.springframework.test.context.transaction.TransactionContext: trace
