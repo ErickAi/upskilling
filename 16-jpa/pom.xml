@@ -10,9 +10,8 @@
   </parent>
 
   <groupId>er.upskilling</groupId>
-  <artifactId>jpa</artifactId>
+  <artifactId>16-jpa</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>16-jpa</name>
 
   <properties>
     <java.version>15</java.version>

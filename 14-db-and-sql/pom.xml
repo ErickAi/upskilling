@@ -10,9 +10,8 @@
   </parent>
 
   <groupId>er.upskilling</groupId>
-  <artifactId>sql</artifactId>
+  <artifactId>14-db-and-sql</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>14-db-and-sql</name>
 
   <properties>
     <java.version>15</java.version>
