@@ -5,6 +5,7 @@ HELP.md
 mvnw*
 /log/
 *.log
+*.mp4
 
 target/
 !.mvn/wrapper/maven-wrapper.jar
